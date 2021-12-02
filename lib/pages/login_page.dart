@@ -56,7 +56,7 @@ class _BotonLogin extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 10),
       color: Colors.deepPurple,
       child: const Text('Login', style: TextStyle(fontSize: 30,color: Colors.white),),
-      onPressed: (){},
+      onPressed: ()=>Navigator.pushNamed(context, 'home_page'),
     );
   }
 }

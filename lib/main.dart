@@ -18,6 +18,10 @@ class MyApp extends StatelessWidget {
         'welcome_page' : ( _ ) => const WelcomePage(),
         'login_page'   : ( _ ) => const LoginPage(),
         'signup_page'  : ( _ ) => const SignUpPage(),
+        'home_page'    : ( _ ) => const HomePage(),
+        'books_page'   : ( _ ) => const BooksPage(),
+        'videos_page'  : ( _ ) => const VideosPage(),
+        'settings_page': ( _ ) => const SettingsPage(),
       },
     );
   }
