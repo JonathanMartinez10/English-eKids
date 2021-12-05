@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       Image(image: AssetImage('../assets/home/Alphabet_icon.png')),
-                      SizedBox(height: 80.0,),
+                      SizedBox(height: 20.0,),
                       Text("Alphabet", style: new TextStyle(fontSize: 17.0))
                     ],
                   ),
@@ -44,8 +44,8 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      Image(image: AssetImage('../assets/login/Numbers_icon.png')),
-                      SizedBox(height: 30.0,),
+                      Image(image: AssetImage('../assets/home/Numbers_icon.png')),
+                      SizedBox(height: 20.0,),
                       Text("Numbers", style: new TextStyle(fontSize: 17.0))
                     ],
                   ),
@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       Image(image: AssetImage('../assets/home/Colors_icon.png')),
-                      SizedBox(height: 80.0,),
+                      SizedBox(height: 20.0,),
                       Text("Colors", style: new TextStyle(fontSize: 17.0))
                     ],
                   ),
@@ -79,7 +79,7 @@ class HomePage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       Image(image: AssetImage('../assets/home/Shapes_icon.png')),
-                      SizedBox(height: 80.0,),
+                      SizedBox(height: 20.0,),
                       Text("Shapes", style: new TextStyle(fontSize: 17.0))
                     ],
                   ),
@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       Image(image: AssetImage('../assets/home/Body_icon.png')),
-                      SizedBox(height: 80.0,),
+                      SizedBox(height: 20.0,),
                       Text("Body parts", style: new TextStyle(fontSize: 17.0))
                     ],
                   ),
