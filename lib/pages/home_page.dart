@@ -27,8 +27,8 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: const[
-                      Image(image: AssetImage('assets/home/Alphabet_icon.png')),
-                      SizedBox(height: 20.0,),
+                      Image(image: AssetImage('assets/home/Alphabet_icon.png'), width: 85),
+                      SizedBox(height:5.0,),
                       Text("Alphabet", style: TextStyle(fontSize: 17.0))
                     ],
                   ),
@@ -44,8 +44,8 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: const[
-                      Image(image: AssetImage('assets/home/Numbers_icon.png')),
-                      SizedBox(height: 20.0,),
+                      Image(image: AssetImage('assets/home/Numbers_icon.png'), width: 85),
+                      SizedBox(height: 5.0,),
                       Text("Numbers", style: TextStyle(fontSize: 17.0))
                     ],
                   ),
@@ -61,8 +61,8 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: const[
-                      Image(image: AssetImage('assets/home/Colors_icon.png')),
-                      SizedBox(height: 20.0,),
+                      Image(image: AssetImage('assets/home/Colors_icon.png'), width: 85),
+                      SizedBox(height: 5.0,),
                       Text("Colors", style: TextStyle(fontSize: 17.0))
                     ],
                   ),
@@ -78,8 +78,8 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: const[
-                      Image(image: AssetImage('assets/home/Shapes_icon.png')),
-                      SizedBox(height: 20.0,),
+                      Image(image: AssetImage('assets/home/Shapes_icon.png'), width: 85),
+                      SizedBox(height: 5.0,),
                       Text("Shapes", style: TextStyle(fontSize: 17.0))
                     ],
                   ),
@@ -95,8 +95,8 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: const[
-                      Image(image: AssetImage('assets/home/Body_icon.png')),
-                      SizedBox(height: 20.0,),
+                      Image(image: AssetImage('assets/home/Body_icon.png'), width: 85),
+                      SizedBox(height: 5.0,),
                       Text("Body parts", style: TextStyle(fontSize: 17.0))
                     ],
                   ),
