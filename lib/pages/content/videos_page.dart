@@ -5,8 +5,13 @@ class VideosPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body:  Center(        
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('English kids'),
+        backgroundColor: Colors.pink[800],
+        automaticallyImplyLeading: false,
+      ),
+      body:  const Center(        
         child: Text('Videos page'),
      ),
     );

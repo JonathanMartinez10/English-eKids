@@ -8,24 +8,26 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.white,
-        width: double.infinity,
-
-        child: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: const[
-              SizedBox(height: 60.0,),
-              Text('Sign Up',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: Colors.deepPurple),),
-              SizedBox(height: 50.0,),
-              Text('Ingresa tus datos',style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),),
-
-              _CrearInputs(),
-              SizedBox(height: 40,),
-              
-              _BotonSignUp()
-            ],
+      body: SingleChildScrollView(
+        child: Container(
+          color: Colors.white,
+          width: double.infinity,
+      
+          child: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: const[
+                SizedBox(height: 60.0,),
+                Text('Sign Up',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: Colors.deepPurple),),
+                SizedBox(height: 50.0,),
+                Text('Ingresa tus datos',style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),),
+      
+                _CrearInputs(),
+                SizedBox(height: 40,),
+                
+                _BotonSignUp()
+              ],
+            ),
           ),
         ),
       ),
