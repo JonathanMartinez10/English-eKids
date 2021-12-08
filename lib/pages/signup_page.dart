@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -158,7 +160,10 @@ class _BotonSignUp extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 10),
       color: Colors.deepPurple,
       child: const Text('Sign Up', style: TextStyle(fontSize: 30,color: Colors.white),),
-      onPressed: (){},
+      onPressed: (){
+        //verifica so no hay un usuario con coincidencias
+        print("Sing up");
+      },
     );
   }
 }
