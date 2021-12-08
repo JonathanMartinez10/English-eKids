@@ -6,12 +6,14 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Container(
-        color: Colors.white,
-        width: double.infinity,
-        
-        child: const SafeArea(
-          child: _Body(),
+      body: SingleChildScrollView(
+        child: Container(
+          color: Colors.white,
+          width: double.infinity,
+          
+          child: const SafeArea(
+            child: _Body(),
+          ),
         ),
       ),
     );

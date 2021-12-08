@@ -1,112 +1,59 @@
+import 'package:english_ekids/pages/pages.dart';
 import 'package:flutter/material.dart';
 //Mis importaciones
-import 'package:english_ekids/widgets/bottom_navigation_bar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+
+  int currentindex=0;
+  final screens=[
+    const MenuPage(),
+    const BooksPage(),
+    const VideosPage(),
+    const SettingsPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('English kids'),
-        backgroundColor: Colors.deepPurple,
-      ),
-      body: Container(
-        //Menu de contenido
-        padding: const EdgeInsets.all(30.0),
-        child: GridView.count(
-          crossAxisCount: 2,
-          children:[
-            Card(
-              margin: const EdgeInsets.all(8.0),
-              child: InkWell(
-                onTap: (){},
-                splashColor: Colors.green,
-                child: Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const[
-                      Image(image: AssetImage('assets/home/Alphabet_icon.png'), width: 85),
-                      SizedBox(height:5.0,),
-                      Text("Alphabet", style: TextStyle(fontSize: 17.0))
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(8.0),
-              child: InkWell(
-                onTap: (){},
-                splashColor: Colors.green,
-                child: Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const[
-                      Image(image: AssetImage('assets/home/Numbers_icon.png'), width: 85),
-                      SizedBox(height: 5.0,),
-                      Text("Numbers", style: TextStyle(fontSize: 17.0))
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(8.0),
-              child: InkWell(
-                onTap: (){},
-                splashColor: Colors.green,
-                child: Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const[
-                      Image(image: AssetImage('assets/home/Colors_icon.png'), width: 85),
-                      SizedBox(height: 5.0,),
-                      Text("Colors", style: TextStyle(fontSize: 17.0))
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(8.0),
-              child: InkWell(
-                onTap: (){},
-                splashColor: Colors.green,
-                child: Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const[
-                      Image(image: AssetImage('assets/home/Shapes_icon.png'), width: 85),
-                      SizedBox(height: 5.0,),
-                      Text("Shapes", style: TextStyle(fontSize: 17.0))
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(8.0),
-              child: InkWell(
-                onTap: (){},
-                splashColor: Colors.green,
-                child: Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const[
-                      Image(image: AssetImage('assets/home/Body_icon.png'), width: 85),
-                      SizedBox(height: 5.0,),
-                      Text("Body parts", style: TextStyle(fontSize: 17.0))
-                    ],
-                  ),
-                ),
-              ),
-            )
-         ],
+      
+      body: screens[currentindex],
+
+     bottomNavigationBar: BottomNavigationBar(
+      //type: BottomNavigationBarType.fixed,
+      iconSize: 36,
+      currentIndex: currentindex,
+      onTap: (index) => setState(()=> currentindex=index),
+      unselectedItemColor: Colors.grey[400],
+      items: [
+        const BottomNavigationBarItem(
+          icon:  Icon(Icons.home),
+          label: 'Home',
+          backgroundColor: Colors.deepPurple,
         ),
-     ),
-     bottomNavigationBar: const BottomNavigationBarPrincipal(),
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.book),
+          label: 'Books',
+          backgroundColor: Colors.cyan[800],
+        ),
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.play_arrow),
+          label: 'Play',
+          backgroundColor: Colors.pink[800],
+        ),
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.settings_applications_sharp),
+          label: 'Ajustes',
+          backgroundColor: Colors.blue.shade800,
+        ),
+      ],
+    ),
    );
   }
 }
