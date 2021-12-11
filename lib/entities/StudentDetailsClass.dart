@@ -4,11 +4,9 @@ class StudentDetail {
   String email = "";
   String pass = "";
 
-  StudentDetail(
-      {this.name = "", this.email = "", this.pass = ""});
+  StudentDetail({this.name = "", this.email = "", this.pass = ""});
 
-  StudentDetail.parameters(
-      String name, String email, String pass) {
+  StudentDetail.parameters(String name, String email, String pass) {
     this.name = name;
     this.email = email;
     this.pass = pass;
@@ -16,7 +14,7 @@ class StudentDetail {
 
   Map<String, dynamic> toMap() {
     return {
-      'id' : id,
+      'id': id,
       'name': name,
       'bornYear': email,
       'currentAge': pass,
@@ -29,5 +27,4 @@ class StudentDetail {
     this.email = map['email'];
     this.pass = map['pass'];
   }
-
 }
