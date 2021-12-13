@@ -1,7 +1,5 @@
 import 'dart:html';
-
 import 'package:flutter/material.dart';
-import 'package:english_ekids/connections/startConnection.dart';
 import 'package:english_ekids/entities/StudentDetailsClass.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -11,16 +9,15 @@ class SignUpPage extends StatelessWidget {
   String pass2 = "";
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   SignUpPage();
+  static final List<StudentDetail> students = [];
 
-  void iniciarSesion() {
+  void iniciarSesion(context) {
     FormState? _formState = _formKey.currentState;
 
     if (_formState!.validate()) {
       _formState.save();
-      print("Correcto");
-      db.initDB();
-    } else {
-      print("No");
+      students.add(new StudentDetail.parameters(name, email, pass));
+      Navigator.pushReplacementNamed(context, 'login_page');
     }
   }
 
@@ -96,12 +93,6 @@ class SignUpPage extends StatelessWidget {
                             StudentDetail studentDetails =
                                 new StudentDetail.parameters(
                                     name, value.toString(), pass);
-                            var coincidences = db.searchCoincidence(studentDetails);
-                            if (coincidences) {
-                              return "Ya se uso ese correo para otra cuenta";
-                            } else {
-                              return null;
-                            }
                           } else {
                             return "Correo incorrecto";
                           }
@@ -175,7 +166,7 @@ class SignUpPage extends StatelessWidget {
                         ),
                         onPressed: () {
                           //verifica so no hay un usuario con coincidencias
-                          iniciarSesion();
+                          iniciarSesion(context);
                         },
                       ),
                     ],

@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 //Mis importaciones
-import 'package:english_ekids/pages/pages.dart';
+import "package:english_ekids/pages/pages.dart";
 
 void main() => runApp(const MyApp());
 
