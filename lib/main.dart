@@ -1,6 +1,9 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
+import 'package:sqflite/sqflite.dart';
+import 'package:english_ekids/pages/signup_page.dart';
+
 //Mis importaciones
-import "package:english_ekids/pages/pages.dart";
+import 'package:english_ekids/pages/pages.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,14 +16,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       initialRoute: 'welcome_page',
-      routes: {
-        'welcome_page': (_) => const WelcomePage(),
-        'login_page': (_) => LoginPage(),
-        'signup_page': (_) => SignUpPage(),
-        'home_page': (_) => const HomePage(),
-        'books_page': (_) => const BooksPage(),
-        'videos_page': (_) => const VideosPage(),
-        'settings_page': (_) => const SettingsPage(),
+      routes:{
+        'welcome_page' : ( _ ) => const WelcomePage(),
+        'login_page'   : ( _ ) => LoginPage(),
+        'signup_page'  : ( _ ) => SignUpPage(),
+        'home_page'    : ( _ ) => const HomePage(),
+        'books_page'   : ( _ ) => const BooksPage(),
+        'videos_page'  : ( _ ) => const VideosPage(),
+        'settings_page': ( _ ) => const SettingsPage(),
       },
     );
   }

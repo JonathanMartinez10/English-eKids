@@ -27,4 +27,16 @@ class StudentDetail {
     this.email = map['email'];
     this.pass = map['pass'];
   }
+
+  String getEmail() {
+    return email;
+  }
+
+  String getName() {
+    return name;
+  }
+
+  String getPass() {
+    return pass;
+  }
 }
