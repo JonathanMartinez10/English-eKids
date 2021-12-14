@@ -13,15 +13,15 @@ class MenuPage extends StatelessWidget {
       ),
       body: Container(
       //Menu de contenido
-      padding: const EdgeInsets.all(30.0),
-      child: GridView.count(
+      padding: const EdgeInsets.all(12.0),
+      child: GridView.count(        
         crossAxisCount: 2,
         children:[
           Card(
             margin: const EdgeInsets.all(8.0),
             child: InkWell(
               onTap: (){},
-              splashColor: Colors.green,
+              splashColor: Colors.deepPurple,
               child: Center(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -38,7 +38,7 @@ class MenuPage extends StatelessWidget {
             margin: const EdgeInsets.all(8.0),
             child: InkWell(
               onTap: (){},
-              splashColor: Colors.green,
+              splashColor: Colors.deepPurple,
               child: Center(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -55,7 +55,7 @@ class MenuPage extends StatelessWidget {
             margin: const EdgeInsets.all(8.0),
             child: InkWell(
               onTap: (){},
-              splashColor: Colors.green,
+              splashColor: Colors.deepPurple,
               child: Center(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -72,7 +72,7 @@ class MenuPage extends StatelessWidget {
             margin: const EdgeInsets.all(8.0),
             child: InkWell(
               onTap: (){},
-              splashColor: Colors.green,
+              splashColor: Colors.deepPurple,
               child: Center(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -89,7 +89,7 @@ class MenuPage extends StatelessWidget {
             margin: const EdgeInsets.all(8.0),
             child: InkWell(
               onTap: (){},
-              splashColor: Colors.green,
+              splashColor: Colors.deepPurple,
               child: Center(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,

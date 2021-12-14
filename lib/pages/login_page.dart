@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:english_ekids/pages/signup_page.dart';
-import 'package:english_ekids/entities/StudentDetailsClass.dart';
 
 class LoginPage extends StatelessWidget {
   static final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -8,7 +7,7 @@ class LoginPage extends StatelessWidget {
   static String pass = "";
   static String emailTemp = "";
 
-  LoginPage({Key? key}) : super(key: key);
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +61,7 @@ class _BotonLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return MaterialButton(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 10),
       color: Colors.deepPurple,
@@ -123,8 +122,11 @@ class _CrearPassword extends StatelessWidget {
       ),
       onChanged: (valor){},
       validator: (value) {
+        if(true){
+          return null;
+        }
         //comparar si el usuario existe
-        if (SignUpPage.student.getEmail() != LoginPage.emailTemp) {
+        /*if (SignUpPage.student.getEmail() != LoginPage.emailTemp) {
           return "No esxiste el usuario";
         }
         else if(SignUpPage.student.getPass() == value)
@@ -132,7 +134,7 @@ class _CrearPassword extends StatelessWidget {
           return "Contrasena incorrecta";
         } else {
           return null;
-        }
+        }*/
       },
       onSaved: (var value) => LoginPage.pass = value.toString(),
     );
@@ -160,11 +162,14 @@ class _CrearEmai extends StatelessWidget {
         LoginPage.emailTemp = valor;
       },
       validator: (value) {
-        if (SignUpPage.student.getEmail() != value) {
+        if(true){
+          return null;
+        }
+        /*if (SignUpPage.student.getEmail() != value) {
           return "Compruve su correo, o registrece";
         } else {
           return null;
-        }
+        }*/
       },
       onSaved: (var value) => LoginPage.email = value.toString(),
     );

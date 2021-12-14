@@ -6,9 +6,9 @@ class SignUpPage extends StatelessWidget {
   static String name = "";
   static String email = "";
   static String pass = "";
-  static StudentDetail student = new StudentDetail();
+  static StudentDetail student = StudentDetail();
 
-  SignUpPage ({Key? key}) : super(key: key);
+  const SignUpPage ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -199,7 +199,7 @@ class _BotonSignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return MaterialButton(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 10),
       color: Colors.deepPurple,
