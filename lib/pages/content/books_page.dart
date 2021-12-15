@@ -16,8 +16,8 @@ class BooksPage extends StatelessWidget {
       body:  ListView(
         children:[
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 7.0, vertical: 5.0),
-            child: Column(            
+            padding: const EdgeInsets.symmetric(horizontal: 7.0, vertical: 5.0),          
+            child: Column(
               children: const[
                 Book1(),
                 Divider(),
