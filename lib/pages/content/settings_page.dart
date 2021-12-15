@@ -1,3 +1,5 @@
+import 'package:english_ekids/pages/content/settings_page_two.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -5,15 +7,149 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Settings',
+      home: EditProfilePage(),
+    );
+  }
+}
+
+class EditProfilePage extends StatefulWidget {
+  const EditProfilePage({ Key? key }) : super(key: key);
+
+  @override
+  _EditProfilePageState createState() => _EditProfilePageState();
+}
+
+class _EditProfilePageState extends State<EditProfilePage> {
+
+  bool muestraPassword=false;
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('English kids'),
         backgroundColor: Colors.blue.shade800,
-        automaticallyImplyLeading: false,
+        elevation: 2,        
+        actions: [
+          IconButton(            
+            onPressed: (){
+              Navigator.of(context).push<void>(                
+                MaterialPageRoute<void>(                  
+                  builder: (BuildContext context) => const SettingsPageTwo(),                  
+                ),
+              );
+            },
+            icon: const Icon(Icons.settings ,color: Colors.white,),    
+          ),
+        ],
       ),
-      body:  const Center(        
-        child: Text('Settings page'),
-     ),
+
+      body: Container(
+        padding: const EdgeInsets.only(left: 16,top: 25,right: 16),
+        child: GestureDetector(
+          onTap: (){
+            FocusScope.of(context).unfocus();
+          },
+          child: ListView(
+            children: [
+              const Text('Edit profile', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),),
+              const SizedBox(height: 25.0,),
+              Center(
+                child: Stack(
+                  children: [
+                    Container(
+                      width: 130,
+                      height: 130,
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 4, color: Theme.of(context).scaffoldBackgroundColor),
+                        boxShadow: [
+                          BoxShadow(spreadRadius: 2, blurRadius: 10, color: Colors.black.withOpacity(0.1),offset: const Offset(0, 10)),
+                        ],
+                        shape: BoxShape.circle,
+                        image: const DecorationImage(image: AssetImage('assets/books/book3/image1.jpg'),fit: BoxFit.cover),                    
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: Container(                    
+                      height: 40,
+                      width: 40,
+                      decoration:  BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(width: 4, color: Theme.of(context).scaffoldBackgroundColor,),
+                        color: Colors.blue,
+                      ),
+                      child: const Icon(Icons.edit, color: Colors.white,),
+                    )),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 35,),
+              crearTextField("Full Name","Jonathan Martinez",false),
+              crearTextField("E-mail","jonathanmartzca@gmail.com", false),
+              crearTextField("Password","************", true),
+              crearTextField("Country","Mexico", false),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children:[
+                  OutlinedButton(                                                                                                    
+                    onPressed: (){},
+                    child: const Text(
+                      'CANCEL',
+                      style: TextStyle(
+                        fontSize: 14,
+                        letterSpacing: 2.2,
+                        color: Colors.black,
+                      ),
+                    ),                    
+                  ),
+                  MaterialButton(                    
+                    onPressed: (){},                           
+                    color: Colors.blue[900],
+                    child: const Text('SAVE', style: TextStyle(
+                      fontSize: 14,
+                      letterSpacing: 2.2,
+                      color: Colors.white,
+                    ),),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget crearTextField( String labelText, String placeholder, bool isPasswordField){
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 35.0),
+      child: TextField(
+        obscureText: isPasswordField ? muestraPassword : false,
+        decoration: InputDecoration(
+          suffixIcon: isPasswordField ? IconButton(
+            onPressed: (){
+              setState(() {
+                muestraPassword= !muestraPassword;
+              });
+            },
+            icon: const Icon(Icons.remove_red_eye, color: Colors.grey),
+          ) : null ,
+          contentPadding: const EdgeInsets.only(bottom: 3.0),
+          labelText: labelText,
+          floatingLabelBehavior: FloatingLabelBehavior.always,
+          hintText: placeholder,
+          hintStyle: const TextStyle(
+            fontSize: 16, 
+            fontWeight: FontWeight.bold, 
+            color: Colors.black,
+          )
+        ),
+      ),
     );
   }
 }
