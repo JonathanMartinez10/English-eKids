@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_tts: ^3.2.3
+  image_picker: ^0.8.4+4
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,9 @@ flutter:
     - assets/home/
     - assets/books/
     - assets/shapes/
+    - assets/books/book1/
+    - assets/books/book2/
+    - assets/books/book3/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

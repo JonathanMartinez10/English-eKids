@@ -1,6 +1,9 @@
+import 'dart:io';
 import 'package:english_ekids/pages/content/settings_page_two.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({ Key? key }) : super(key: key);
@@ -25,11 +28,28 @@ class EditProfilePage extends StatefulWidget {
 class _EditProfilePageState extends State<EditProfilePage> {
 
   bool muestraPassword=false;
+  File? image;
+  
+  Future pickImage() async {
+    try {
+      final image = await ImagePicker().pickImage(source: ImageSource.gallery);    
+      if(image==null) return;
+      
+      final imageTemporal=File(image.path);
+      setState(() {
+        this.image=imageTemporal;
+      });    
+    } on PlatformException catch (e) {
+      // ignore: avoid_print
+      print('Ocurrio un error en cargar la imagen: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Edit profile', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),),
         backgroundColor: Colors.blue.shade800,
         elevation: 2,        
         actions: [
@@ -53,8 +73,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
             FocusScope.of(context).unfocus();
           },
           child: ListView(
-            children: [
-              const Text('Edit profile', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),),
+            children: [              
               const SizedBox(height: 25.0,),
               Center(
                 child: Stack(
@@ -62,14 +81,15 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     Container(
                       width: 130,
                       height: 130,
-                      decoration: BoxDecoration(
-                        border: Border.all(width: 4, color: Theme.of(context).scaffoldBackgroundColor),
+                      decoration: BoxDecoration(                      
+                        border: Border.all(width: 3, color: Theme.of(context).scaffoldBackgroundColor),
                         boxShadow: [
-                          BoxShadow(spreadRadius: 2, blurRadius: 10, color: Colors.black.withOpacity(0.1),offset: const Offset(0, 10)),
+                          BoxShadow(spreadRadius: 4, blurRadius: 2, color: Colors.black.withOpacity(0.1),offset: const Offset(2, 6)),
                         ],
-                        shape: BoxShape.circle,
-                        image: const DecorationImage(image: AssetImage('assets/books/book3/image1.jpg'),fit: BoxFit.cover),                    
+                        shape: BoxShape.rectangle,
+                        //image: const DecorationImage(image: AssetImage('assets/books/book3/image1.jpg'),fit: BoxFit.cover),
                       ),
+                      child: image !=null ? Image.file(image!) : const Image(image: AssetImage('assets/books/book3/image1.jpg'),fit: BoxFit.cover),
                     ),
                     Positioned(
                       bottom: 0,
@@ -82,7 +102,10 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         border: Border.all(width: 4, color: Theme.of(context).scaffoldBackgroundColor,),
                         color: Colors.blue,
                       ),
-                      child: const Icon(Icons.edit, color: Colors.white,),
+                      child:  IconButton(
+                        onPressed: ()=> pickImage(),
+                        icon: const Icon(Icons.edit, color: Colors.white,size: 19,),
+                      ),
                     )),
                   ],
                 ),

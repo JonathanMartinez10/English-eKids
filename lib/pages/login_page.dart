@@ -1,3 +1,4 @@
+import 'package:english_ekids/pages/pages.dart';
 import 'package:flutter/material.dart';
 import 'package:english_ekids/pages/signup_page.dart';
 
@@ -182,7 +183,9 @@ void iniciarSesion(context) {
     if (_formState!.validate()) {
       _formState.save();
       print("Correcto");
-      Navigator.pushNamed(context, 'home_page');
+      Navigator.pushReplacement<void, void>(context,MaterialPageRoute<void>(
+        builder: (BuildContext context) => const HomePage(),
+      ),);
     } else {
       print("No");
     }
