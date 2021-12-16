@@ -1,8 +1,10 @@
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
-import 'package:english_ekids/pages/pages.dart';
 
-class MenuPage extends StatelessWidget {
-  const MenuPage({Key? key}) : super(key: key);
+class ShapesPage extends StatelessWidget {
+  ShapesPage({Key? key}) : super(key: key);
+
+  static final FlutterTts flutterTts = FlutterTts();
 
   @override
   Widget build(BuildContext context) {
@@ -21,61 +23,21 @@ class MenuPage extends StatelessWidget {
             Card(
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  _speak("hexagon");
+                },
                 splashColor: Colors.deepPurple,
                 child: Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/home/Alphabet_icon.png'),
-                          width: 85),
+                          image: AssetImage('assets/shapes/hexagon.png'),
+                          width: 75),
                       SizedBox(
                         height: 5.0,
                       ),
-                      Text("Alphabet", style: TextStyle(fontSize: 17.0))
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(8.0),
-              child: InkWell(
-                onTap: () {},
-                splashColor: Colors.deepPurple,
-                child: Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      Image(
-                          image: AssetImage('assets/home/Numbers_icon.png'),
-                          width: 85),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Numbers", style: TextStyle(fontSize: 17.0))
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Card(
-              margin: const EdgeInsets.all(8.0),
-              child: InkWell(
-                onTap: () {},
-                splashColor: Colors.deepPurple,
-                child: Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      Image(
-                          image: AssetImage('assets/home/Colors_icon.png'),
-                          width: 85),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Colors", style: TextStyle(fontSize: 17.0))
+                      Text("Hexagon", style: TextStyle(fontSize: 17.0))
                     ],
                   ),
                 ),
@@ -85,7 +47,7 @@ class MenuPage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, 'shape_info');
+                  _speak("Square");
                 },
                 splashColor: Colors.deepPurple,
                 child: Center(
@@ -93,12 +55,12 @@ class MenuPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/home/Shapes_icon.png'),
-                          width: 85),
+                          image: AssetImage('assets/shapes/Cuadrado.png'),
+                          width: 75),
                       SizedBox(
                         height: 5.0,
                       ),
-                      Text("Shapes", style: TextStyle(fontSize: 17.0)),
+                      Text("Square", style: TextStyle(fontSize: 17.0))
                     ],
                   ),
                 ),
@@ -107,19 +69,67 @@ class MenuPage extends StatelessWidget {
             Card(
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  _speak("Octagon");
+                },
                 splashColor: Colors.deepPurple,
                 child: Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/home/Body_icon.png'),
-                          width: 85),
+                          image: AssetImage('assets/shapes/octagono.png'),
+                          width: 75),
                       SizedBox(
                         height: 5.0,
                       ),
-                      Text("Body parts", style: TextStyle(fontSize: 17.0))
+                      Text("Octagon", style: TextStyle(fontSize: 17.0))
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("Rectangle");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/shapes/rectangle.png'),
+                          width: 75),
+                      SizedBox(
+                        height: 5.0,
+                      ),
+                      Text("Rectangle", style: TextStyle(fontSize: 17.0))
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("Trapeze");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/shapes/Trapecio.png'),
+                          width: 75),
+                      SizedBox(
+                        height: 5.0,
+                      ),
+                      Text("Trapeze", style: TextStyle(fontSize: 17.0))
                     ],
                   ),
                 ),
@@ -130,4 +140,10 @@ class MenuPage extends StatelessWidget {
       ),
     );
   }
+}
+
+void _speak(value) async {
+  await ShapesPage.flutterTts.setLanguage("en-US");
+  await ShapesPage.flutterTts.setPitch(1);
+  await ShapesPage.flutterTts.speak(value);
 }
