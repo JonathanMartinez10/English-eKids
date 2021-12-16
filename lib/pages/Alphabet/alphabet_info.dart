@@ -1,8 +1,10 @@
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
-import 'package:english_ekids/pages/pages.dart';
 
-class MenuPage extends StatelessWidget {
-  const MenuPage({Key? key}) : super(key: key);
+class AlphabetPage extends StatelessWidget {
+  AlphabetPage({Key? key}) : super(key: key);
+
+  static final FlutterTts flutterTts = FlutterTts();
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class MenuPage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, 'alphabet_info');
+                  _speak("a");
                 },
                 splashColor: Colors.deepPurple,
                 child: Center(
@@ -30,12 +32,8 @@ class MenuPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/home/Alphabet_icon.png'),
-                          width: 85),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Alphabet", style: TextStyle(fontSize: 17.0))
+                          image: AssetImage('assets/alphabet/a.jpg'),
+                          width: 100),
                     ],
                   ),
                 ),
@@ -45,7 +43,7 @@ class MenuPage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, 'numbers_info');
+                  _speak("b");
                 },
                 splashColor: Colors.deepPurple,
                 child: Center(
@@ -53,12 +51,8 @@ class MenuPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/home/Numbers_icon.png'),
-                          width: 85),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Numbers", style: TextStyle(fontSize: 17.0))
+                          image: AssetImage('assets/alphabet/b.jpg'),
+                          width: 100),
                     ],
                   ),
                 ),
@@ -68,7 +62,7 @@ class MenuPage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, 'colors_info');
+                  _speak("c");
                 },
                 splashColor: Colors.deepPurple,
                 child: Center(
@@ -76,12 +70,8 @@ class MenuPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/home/Colors_icon.png'),
-                          width: 85),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Colors", style: TextStyle(fontSize: 17.0))
+                          image: AssetImage('assets/alphabet/c.jpg'),
+                          width: 100),
                     ],
                   ),
                 ),
@@ -91,7 +81,7 @@ class MenuPage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, 'shape_info');
+                  _speak("d");
                 },
                 splashColor: Colors.deepPurple,
                 child: Center(
@@ -99,12 +89,8 @@ class MenuPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/home/Shapes_icon.png'),
-                          width: 85),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Shapes", style: TextStyle(fontSize: 17.0)),
+                          image: AssetImage('assets/alphabet/d.jpg'),
+                          width: 100),
                     ],
                   ),
                 ),
@@ -114,7 +100,7 @@ class MenuPage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, 'bodyParts_info');
+                  _speak("e");
                 },
                 splashColor: Colors.deepPurple,
                 child: Center(
@@ -122,12 +108,27 @@ class MenuPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/home/Body_icon.png'),
-                          width: 85),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Body parts", style: TextStyle(fontSize: 17.0))
+                          image: AssetImage('assets/alphabet/e.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("f");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/alphabet/f.jpg'),
+                          width: 100),
                     ],
                   ),
                 ),
@@ -138,4 +139,10 @@ class MenuPage extends StatelessWidget {
       ),
     );
   }
+}
+
+void _speak(value) async {
+  await AlphabetPage.flutterTts.setLanguage("en-US");
+  await AlphabetPage.flutterTts.setPitch(1);
+  await AlphabetPage.flutterTts.speak(value);
 }

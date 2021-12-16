@@ -27,6 +27,10 @@ class MyApp extends StatelessWidget {
         'book_two': (_) => const BookTwo(),
         'book_three': (_) => const BookThree(),
         'shape_info': (_) => ShapesPage(),
+        'alphabet_info': (_) => AlphabetPage(),
+        'bodyParts_info': (_) => BodyPartsPage(),
+        'colors_info': (_) => ColorsPage(),
+        'numbers_info': (_) => NumbersPage(),
       },
     );
   }

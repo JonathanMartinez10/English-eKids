@@ -9,3 +9,7 @@ export 'package:english_ekids/pages/books/book_one.dart';
 export 'package:english_ekids/pages/books/book_two.dart';
 export 'package:english_ekids/pages/books/book_three.dart';
 export 'package:english_ekids/pages/shapes/shape_info.dart';
+export 'package:english_ekids/pages/Numbers/numbers_info.dart';
+export 'package:english_ekids/pages/Colors/colors_info.dart';
+export 'package:english_ekids/pages/BodyParts/bodyParts_info.dart';
+export 'package:english_ekids/pages/Alphabet/alphabet_info.dart';
