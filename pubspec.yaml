@@ -66,6 +66,10 @@ flutter:
     - assets/home/
     - assets/books/
     - assets/shapes/
+    - assets/colors/
+    - assets/alphabet/
+    - assets/numbers/
+    - assets/bodyParts/
     - assets/books/book1/
     - assets/books/book2/
     - assets/books/book3/
