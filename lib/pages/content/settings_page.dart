@@ -89,7 +89,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         shape: BoxShape.rectangle,
                         //image: const DecorationImage(image: AssetImage('assets/books/book3/image1.jpg'),fit: BoxFit.cover),
                       ),
-                      child: image !=null ? Image.file(image!) : const Image(image: AssetImage('assets/books/book3/image1.jpg'),fit: BoxFit.cover),
+                      child: image !=null ? Image.file(image!) : const Image(image: AssetImage('assets/home/avatar_default.jpg'),fit: BoxFit.cover),
                     ),
                     Positioned(
                       bottom: 0,

@@ -2,7 +2,7 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
 class BodyPartsPage extends StatelessWidget {
-  BodyPartsPage({Key? key}) : super(key: key);
+  const BodyPartsPage({Key? key}) : super(key: key);
 
   static final FlutterTts flutterTts = FlutterTts();
 

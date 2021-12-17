@@ -2,7 +2,7 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
 class NumbersPage extends StatelessWidget {
-  NumbersPage({Key? key}) : super(key: key);
+  const NumbersPage({Key? key}) : super(key: key);
 
   static final FlutterTts flutterTts = FlutterTts();
 

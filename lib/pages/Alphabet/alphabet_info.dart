@@ -2,7 +2,7 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
 class AlphabetPage extends StatelessWidget {
-  AlphabetPage({Key? key}) : super(key: key);
+  const AlphabetPage({Key? key}) : super(key: key);
 
   static final FlutterTts flutterTts = FlutterTts();
 

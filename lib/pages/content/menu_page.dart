@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:english_ekids/pages/pages.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({Key? key}) : super(key: key);

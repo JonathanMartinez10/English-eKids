@@ -216,7 +216,7 @@ void iniciarSesion(context) {
 
   if (_formState!.validate()) {
     _formState.save();
-    SignUpPage.student = new StudentDetail.parameters(SignUpPage.name, SignUpPage.email, SignUpPage.pass);
+    SignUpPage.student =  StudentDetail.parameters(SignUpPage.name, SignUpPage.email, SignUpPage.pass);
     Navigator.pushReplacementNamed(context, 'login_page');
   }
 }

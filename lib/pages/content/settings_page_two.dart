@@ -10,6 +10,11 @@ class SettingsPageTwo extends StatefulWidget {
 }
 
 class _SettingsPageTwoState extends State<SettingsPageTwo> {
+
+  bool bloquearSwitch = false;
+  bool bloquearSwitch2 = false;
+  bool bloquearSwitch3 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,9 +63,9 @@ class _SettingsPageTwoState extends State<SettingsPageTwo> {
             const Divider(height: 15, thickness: 2,),
             const SizedBox(height: 15.0,),
 
-            crearNotificacionesOpcionesFila("Dark mode", false),
-            crearNotificacionesOpcionesFila("Sounds", true),
-            crearNotificacionesOpcionesFila("Notifications", true),
+            crearNotificacionesOpciones("Dark mode"),
+            crearNotificacionesOpciones2("Sounds"),
+            crearNotificacionesOpciones3("Notifications"),
             
             const Divider(height: 15, thickness: 2,),
             const SizedBox(height: 30,),
@@ -80,7 +85,7 @@ class _SettingsPageTwoState extends State<SettingsPageTwo> {
     );
   }
 
-  Row crearNotificacionesOpcionesFila(String title, bool isActive){
+  Row crearNotificacionesOpciones(String title){
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -95,8 +100,64 @@ class _SettingsPageTwoState extends State<SettingsPageTwo> {
         Transform.scale(
           scale: 1.3,
           child: Switch(
-            value: isActive,
-            onChanged: (bool val){},
+            value: bloquearSwitch,
+            onChanged: (valor){
+              setState(() {
+                bloquearSwitch=valor;
+              });
+            },
+          ),
+        ),
+      ],
+    );
+  }
+  Row crearNotificacionesOpciones2(String title){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: Colors.grey[600],
+          ),
+        ),
+        Transform.scale(
+          scale: 1.3,
+          child: Switch(
+            value: bloquearSwitch2,
+            onChanged: (valor){
+              setState(() {
+                bloquearSwitch2=valor;
+              });
+            },
+          ),
+        ),
+      ],
+    );
+  }
+  Row crearNotificacionesOpciones3(String title){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: Colors.grey[600],
+          ),
+        ),
+        Transform.scale(
+          scale: 1.3,
+          child: Switch(
+            value: bloquearSwitch3,
+            onChanged: (valor){
+              setState(() {
+                bloquearSwitch3=valor;
+              });
+            },
           ),
         ),
       ],

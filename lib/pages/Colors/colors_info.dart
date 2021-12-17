@@ -2,7 +2,7 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
 class ColorsPage extends StatelessWidget {
-  ColorsPage({Key? key}) : super(key: key);
+  const ColorsPage({Key? key}) : super(key: key);
 
   static final FlutterTts flutterTts = FlutterTts();
 

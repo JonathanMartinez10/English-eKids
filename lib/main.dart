@@ -26,11 +26,11 @@ class MyApp extends StatelessWidget {
         'book_one': (_) => const BookOne(),
         'book_two': (_) => const BookTwo(),
         'book_three': (_) => const BookThree(),
-        'shape_info': (_) => ShapesPage(),
-        'alphabet_info': (_) => AlphabetPage(),
-        'bodyParts_info': (_) => BodyPartsPage(),
-        'colors_info': (_) => ColorsPage(),
-        'numbers_info': (_) => NumbersPage(),
+        'shape_info': (_) => const ShapesPage(),
+        'alphabet_info': (_) => const AlphabetPage(),
+        'bodyParts_info': (_) => const BodyPartsPage(),
+        'colors_info': (_) => const ColorsPage(),
+        'numbers_info': (_) => const NumbersPage(),
       },
     );
   }
