@@ -6,6 +6,7 @@ class SignUpPage extends StatelessWidget {
   static String name = "";
   static String email = "";
   static String pass = "";
+  static String pass2 = "";
   static StudentDetail student = StudentDetail();
 
   const SignUpPage ({Key? key}) : super(key: key);
@@ -122,7 +123,7 @@ class _CrearEmail extends StatelessWidget {
           if (emailCorrect.hasMatch((value.toString()))) {
             return null;
           } else {
-            return "Correp no valido";
+            return "Correo no valido";
           }
         },
         onSaved: (var value) => SignUpPage.email = value.toString(),
@@ -153,7 +154,7 @@ class _CrearPassword extends StatelessWidget {
         if (value != null && value.length > 9 && passCorrect.hasMatch((value.toString()))) {
           return null;
         } else {
-          return "Su contrasena es insegura agregue numeros,letras,otro caracter";
+          return "Contraseña insegura agregue(0-9,a-z,·#?)";
         }
       },
       onSaved: (var value) => SignUpPage.pass = value.toString(),
@@ -184,10 +185,10 @@ class _CrearPassword2 extends StatelessWidget {
         if (value != null && value.length > 9 && passCorrect.hasMatch((value.toString()))) {
           return null;
         } else {
-          return "Su contrasena es insegura agregue numeros,letras,otro caracter";
+          return "Contraseña insegura agregue(0-9,a-z,·#?)";
         }
       },
-      //onSaved: (var value) => pass2 = value.toString(),
+      onSaved: (var value) => SignUpPage.pass2 = value.toString(),
     );
   }
 }

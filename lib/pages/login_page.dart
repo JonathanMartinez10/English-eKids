@@ -67,7 +67,7 @@ class _BotonLogin extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 10),
       color: Colors.deepPurple,
       child: const Text('Login', style: TextStyle(fontSize: 30,color: Colors.white),),
-      //onPressed: ()=>Navigator.pushNamed(context, 'home_page'),
+      
       onPressed: () {
         iniciarSesion(context);
       },
@@ -123,19 +123,16 @@ class _CrearPassword extends StatelessWidget {
       ),
       onChanged: (valor){},
       validator: (value) {
-        if(true){
-          return null;
-        }
         //comparar si el usuario existe
-        /*if (SignUpPage.student.getEmail() != LoginPage.emailTemp) {
+        if (SignUpPage.student.getEmail() != LoginPage.emailTemp) {
           return "No esxiste el usuario";
         }
         else if(SignUpPage.student.getPass() == value)
         {
-          return "Contrasena incorrecta";
-        } else {
           return null;
-        }*/
+        } else {
+          return "Contrasena incorrecta";
+        }
       },
       onSaved: (var value) => LoginPage.pass = value.toString(),
     );
@@ -163,14 +160,11 @@ class _CrearEmai extends StatelessWidget {
         LoginPage.emailTemp = valor;
       },
       validator: (value) {
-        if(true){
-          return null;
-        }
-        /*if (SignUpPage.student.getEmail() != value) {
+        if (SignUpPage.student.getEmail() != value) {
           return "Compruve su correo, o registrece";
         } else {
           return null;
-        }*/
+        }
       },
       onSaved: (var value) => LoginPage.email = value.toString(),
     );
