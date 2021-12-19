@@ -57,7 +57,7 @@ class _SettingsPageTwoState extends State<SettingsPageTwo> {
               children: const[
                 Icon(Icons.volume_up_outlined, color: Colors.blue,),
                 SizedBox(width: 8.0,),
-                Text('Notifications', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                Text('General', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
               ],
             ),
             const Divider(height: 15, thickness: 2,),

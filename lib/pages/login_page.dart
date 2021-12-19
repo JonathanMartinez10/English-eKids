@@ -125,7 +125,7 @@ class _CrearPassword extends StatelessWidget {
       validator: (value) {
         //comparar si el usuario existe
         if (SignUpPage.student.getEmail() != LoginPage.emailTemp) {
-          return "No esxiste el usuario";
+          return "No existe el usuario";
         }
         else if(SignUpPage.student.getPass() == value)
         {
@@ -161,7 +161,7 @@ class _CrearEmai extends StatelessWidget {
       },
       validator: (value) {
         if (SignUpPage.student.getEmail() != value) {
-          return "Compruve su correo, o registrece";
+          return "Verifique su correo o intenta registrarte";
         } else {
           return null;
         }
@@ -177,9 +177,7 @@ void iniciarSesion(context) {
     if (_formState!.validate()) {
       _formState.save();
       print("Correcto");
-      Navigator.pushReplacement<void, void>(context,MaterialPageRoute<void>(
-        builder: (BuildContext context) => const HomePage(),
-      ),);
+      Navigator.pushReplacementNamed(context, 'home_page');
     } else {
       print("No");
     }
