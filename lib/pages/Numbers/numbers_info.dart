@@ -133,6 +133,82 @@ class NumbersPage extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("six");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/numbers/six.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("seven");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/numbers/seven.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("eight");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/numbers/eight.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("nine");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/numbers/nine.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
             )
           ],
         ),

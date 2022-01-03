@@ -133,7 +133,121 @@ class BodyPartsPage extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("ankle");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/bodyParts/ankle.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("arm");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/bodyParts/arm.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("belly");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/bodyParts/belly.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("hair");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/bodyParts/hair.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("mouth");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/bodyParts/mouth.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("nose");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/bodyParts/nose.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

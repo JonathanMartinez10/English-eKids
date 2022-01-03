@@ -24,6 +24,44 @@ class ShapesPage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
+                  _speak("circle");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/shapes/circle.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("heptagon");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/shapes/heptagon.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
                   _speak("hexagon");
                 },
                 splashColor: Colors.deepPurple,
@@ -32,12 +70,8 @@ class ShapesPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/shapes/hexagon.png'),
-                          width: 75),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Hexagon", style: TextStyle(fontSize: 17.0))
+                          image: AssetImage('assets/shapes/hexagon.jpg'),
+                          width: 100),
                     ],
                   ),
                 ),
@@ -47,7 +81,7 @@ class ShapesPage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  _speak("Square");
+                  _speak("octagon");
                 },
                 splashColor: Colors.deepPurple,
                 child: Center(
@@ -55,12 +89,8 @@ class ShapesPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/shapes/Cuadrado.png'),
-                          width: 75),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Square", style: TextStyle(fontSize: 17.0))
+                          image: AssetImage('assets/shapes/octagon.jpg'),
+                          width: 100),
                     ],
                   ),
                 ),
@@ -70,7 +100,7 @@ class ShapesPage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  _speak("Octagon");
+                  _speak("pentagon");
                 },
                 splashColor: Colors.deepPurple,
                 child: Center(
@@ -78,12 +108,8 @@ class ShapesPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/shapes/octagono.png'),
-                          width: 75),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Octagon", style: TextStyle(fontSize: 17.0))
+                          image: AssetImage('assets/shapes/pentagon.jpg'),
+                          width: 100),
                     ],
                   ),
                 ),
@@ -93,7 +119,7 @@ class ShapesPage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  _speak("Rectangle");
+                  _speak("rectangle");
                 },
                 splashColor: Colors.deepPurple,
                 child: Center(
@@ -101,12 +127,8 @@ class ShapesPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/shapes/rectangle.png'),
-                          width: 75),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Rectangle", style: TextStyle(fontSize: 17.0))
+                          image: AssetImage('assets/shapes/rectangle.jpg'),
+                          width: 100),
                     ],
                   ),
                 ),
@@ -116,7 +138,7 @@ class ShapesPage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               child: InkWell(
                 onTap: () {
-                  _speak("Trapeze");
+                  _speak("square");
                 },
                 splashColor: Colors.deepPurple,
                 child: Center(
@@ -124,12 +146,27 @@ class ShapesPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: const [
                       Image(
-                          image: AssetImage('assets/shapes/Trapecio.png'),
-                          width: 75),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text("Trapeze", style: TextStyle(fontSize: 17.0))
+                          image: AssetImage('assets/shapes/square.jpg'),
+                          width: 100),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  _speak("triangle");
+                },
+                splashColor: Colors.deepPurple,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Image(
+                          image: AssetImage('assets/shapes/triangle.jpg'),
+                          width: 100),
                     ],
                   ),
                 ),
