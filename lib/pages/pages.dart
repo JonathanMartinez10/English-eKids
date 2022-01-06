@@ -8,6 +8,8 @@ export 'package:english_ekids/pages/content/menu_page.dart';
 export 'package:english_ekids/pages/books/book_one.dart';
 export 'package:english_ekids/pages/books/book_two.dart';
 export 'package:english_ekids/pages/books/book_three.dart';
+export 'package:english_ekids/pages/books/book_four.dart';
+export 'package:english_ekids/pages/books/book_five.dart';
 export 'package:english_ekids/pages/shapes/shape_info.dart';
 export 'package:english_ekids/pages/Numbers/numbers_info.dart';
 export 'package:english_ekids/pages/Colors/colors_info.dart';

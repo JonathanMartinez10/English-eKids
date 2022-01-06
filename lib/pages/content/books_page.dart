@@ -24,6 +24,10 @@ class BooksPage extends StatelessWidget {
                 Book2(),
                 Divider(),
                 Book3(),
+                Divider(),
+                Book4(),
+                Divider(),
+                Book5(),
               ],
             ),
           ),
@@ -132,6 +136,78 @@ class Book3 extends StatelessWidget {
             const ListTile(
               leading: Icon(Icons.menu_book),
               title: Text('Libro 3 en ingles'),
+              subtitle: Text('Este libro trata de....'),
+            ),                      
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Book4 extends StatelessWidget {
+  const Book4({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: ()=>Navigator.pushNamed(context, 'book_four'),
+      splashColor: Colors.greenAccent,
+      child: Card(
+        elevation: 5.0,
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        child: Column(
+          children: [
+            Stack(
+              alignment: Alignment.center,
+              children: const[
+                Image(image: AssetImage('assets/books/book4.jpg')),
+                Positioned(child: Text('Libro en ingles numero 4',style: TextStyle(color: Colors.white,fontSize: 26),),bottom: 5,),
+              ],
+            ),
+            const Divider(height: 10.0,thickness: 7,),
+            const ListTile(
+              leading: Icon(Icons.menu_book),
+              title: Text('Libro 4 en ingles'),
+              subtitle: Text('Este libro trata de....'),
+            ),                      
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Book5 extends StatelessWidget {
+  const Book5({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: ()=>Navigator.pushNamed(context, 'book_five'),
+      splashColor: Colors.greenAccent,
+      child: Card(
+        elevation: 5.0,
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        child: Column(
+          children: [
+            Stack(
+              alignment: Alignment.center,
+              children: const[
+                Image(image: AssetImage('assets/books/book5.jpg')),
+                Positioned(child: Text('Libro en ingles numero 5',style: TextStyle(color: Colors.white,fontSize: 26),),bottom: 5,),
+              ],
+            ),
+            const Divider(height: 10.0,thickness: 7,),
+            const ListTile(
+              leading: Icon(Icons.menu_book),
+              title: Text('Libro 5 en ingles'),
               subtitle: Text('Este libro trata de....'),
             ),                      
           ],
